@@ -1,24 +1,165 @@
 import logo from './logo.svg';
 import './App.css';
+import Table from './components/Table';
+
+const data = [{
+    "name":"name",
+    "surname":"u.surname",
+    "email":"u.email",
+   "sex":"u.sex",
+   "race":"u.race",
+   "nativeLang":"u.nativeLang",
+   "secondLang":"u.secondLang",
+   "attorneyPrefs":"u.attorneyPrefs"
+
+ },{
+     "name":"name twenty",
+     "surname":"u.surname",
+     "email":"u.email",
+    "sex":"u.sex",
+    "race":"u.race",
+    "nativeLang":"u.nativeLang",
+    "secondLang":"u.secondLang",
+    "attorneyPrefs":"u.attorneyPrefs"
+  },{
+      "name":"name twenty",
+      "surname":"u.surname",
+      "email":"u.email",
+     "sex":"u.sex",
+     "race":"u.race",
+     "nativeLang":"u.nativeLang",
+     "secondLang":"u.secondLang",
+     "attorneyPrefs":"u.attorneyPrefs"
+   },{
+       "name":"name twenty",
+       "surname":"u.surname",
+       "email":"u.email",
+      "sex":"u.sex",
+      "race":"u.race",
+      "nativeLang":"u.nativeLang",
+      "secondLang":"u.secondLang",
+      "attorneyPrefs":"u.attorneyPrefs"
+    },{
+        "name":"name twenty",
+        "surname":"u.surname",
+        "email":"u.email",
+       "sex":"u.sex",
+       "race":"u.race",
+       "nativeLang":"u.nativeLang",
+       "secondLang":"u.secondLang",
+       "attorneyPrefs":"u.attorneyPrefs"
+     },{
+         "name":"name twenty",
+         "surname":"u.surname",
+         "email":"u.email",
+        "sex":"u.sex",
+        "race":"u.race",
+        "nativeLang":"u.nativeLang",
+        "secondLang":"u.secondLang",
+        "attorneyPrefs":"u.attorneyPrefs"
+      },{
+          "name":"name twenty",
+          "surname":"u.surname",
+          "email":"u.email",
+         "sex":"u.sex",
+         "race":"u.race",
+         "nativeLang":"u.nativeLang",
+         "secondLang":"u.secondLang",
+         "attorneyPrefs":"u.attorneyPrefs"
+       },{
+           "name":"name twenty",
+           "surname":"u.surname",
+           "email":"u.email",
+          "sex":"u.sex",
+          "race":"u.race",
+          "nativeLang":"u.nativeLang",
+          "secondLang":"u.secondLang",
+          "attorneyPrefs":"u.attorneyPrefs"
+        },{
+            "name":"name twenty",
+            "surname":"u.surname",
+            "email":"u.email",
+           "sex":"u.sex",
+           "race":"u.race",
+           "nativeLang":"u.nativeLang",
+           "secondLang":"u.secondLang",
+           "attorneyPrefs":"u.attorneyPrefs"
+         },{
+             "name":"name twenty",
+             "surname":"u.surname",
+             "email":"u.email",
+            "sex":"u.sex",
+            "race":"u.race",
+            "nativeLang":"u.nativeLang",
+            "secondLang":"u.secondLang",
+            "attorneyPrefs":"u.attorneyPrefs"
+          },{
+              "name":"name twenty",
+              "surname":"u.surname",
+              "email":"u.email",
+             "sex":"u.sex",
+             "race":"u.race",
+             "nativeLang":"u.nativeLang",
+             "secondLang":"u.secondLang",
+             "attorneyPrefs":"u.attorneyPrefs"
+           },{
+               "name":"name twenty",
+               "surname":"u.surname",
+               "email":"u.email",
+              "sex":"u.sex",
+              "race":"u.race",
+              "nativeLang":"u.nativeLang",
+              "secondLang":"u.secondLang",
+              "attorneyPrefs":"u.attorneyPrefs"
+            },{
+                "name":"name twenty",
+                "surname":"u.surname",
+                "email":"u.email",
+               "sex":"u.sex",
+               "race":"u.race",
+               "nativeLang":"u.nativeLang",
+               "secondLang":"u.secondLang",
+               "attorneyPrefs":"u.attorneyPrefs"
+             },{
+                 "name":"name twenty",
+                 "surname":"u.surname",
+                 "email":"u.email",
+                "sex":"u.sex",
+                "race":"u.race",
+                "nativeLang":"u.nativeLang",
+                "secondLang":"u.secondLang",
+                "attorneyPrefs":"u.attorneyPrefs"
+              },{
+                  "name":"name twenty",
+                  "surname":"u.surname",
+                  "email":"u.email",
+                 "sex":"u.sex",
+                 "race":"u.race",
+                 "nativeLang":"u.nativeLang",
+                 "secondLang":"u.secondLang",
+                 "attorneyPrefs":"u.attorneyPrefs"
+               },{
+                   "name":"name twenty",
+                   "surname":"u.surname",
+                   "email":"u.email",
+                  "sex":"u.sex",
+                  "race":"u.race",
+                  "nativeLang":"u.nativeLang",
+                  "secondLang":"u.secondLang",
+                  "attorneyPrefs":"u.attorneyPrefs"
+                }];
+
+
+const header = ['Name','Surname',	'Email','Attorney Gender','Attorney Race','Attorney	Native Lang','Attorney Second Lang',	'Attorney Rate'];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div style={{width:500}}>
+    <Table
+     tableHeader={header}
+     tableData={data}
+     />
+     </div>
   );
 }
 
