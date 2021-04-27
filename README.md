@@ -16,7 +16,7 @@ yarn add rjs-tables
 ```
 ## Import in your project
 ```javascript
-import Table from 'rjs-tables/rjs-table/Table'
+import Table from 'rjs-tables/Table'
 ```
 ## Use in your project
 ```javascript
