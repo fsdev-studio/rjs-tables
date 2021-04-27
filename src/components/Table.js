@@ -2,23 +2,23 @@ import React, { useState } from 'react';
 import './Table.css';
 
 
-function makeUser(user){
+function makeUser(user,tableBodyStyle){
 
 const userArray = Object.values(user);
 
  const usr = userArray.map((h,i) =>{
 
-  return <td>{h}</td>
+  return <td style={tableBodyStyle}>{h}</td>
 })
    return usr
 }
 
-function Table ({tableHeader,tableData}){
+function Table ({tableStyle,tableContainerStyle,tableHeaderStyle,tableBodyStyle,tableHeader,tableData,pagination}){
  const [incrementVal , setIncrementVal] = useState(0)
 
-const header = tableHeader.map((h,i) =><th>{h}</th>);
+const header = tableHeader.map((h,i) =><th style={tableHeaderStyle}>{h}</th>);
 const data = tableData.map((u,i) =>{
- const usr = makeUser(u);
+ const usr = makeUser(u,tableBodyStyle);
   return(
     <tr>
       {usr}
@@ -28,22 +28,54 @@ const data = tableData.map((u,i) =>{
 
 return(
 
-    <div style={{display:'flex',flexDirection:'column',width:'100%'}}>
-    <table style={{width:'100%'}}>
+    <div style={tableContainerStyle}>
+    <table style={tableStyle}>
     <tr>
     {header}
     </tr>
      {data}
   </table>
+  { pagination ?
   <div style={{display:'flex', width:'100%', justifyContent:'center', alignItems:'center'}}>
 
-{ (incrementVal +10) > tableData.length  ?<span style={{display:'flex', justifyContent:'center', alignItems:'center',fontSize:30,cursor:'pointer',border:'1px solid black',width:30,height:30,margin:3}} onClick={() =>setIncrementVal((incrementVal-10))}>&#706;</span>: null }
+{ (incrementVal +10) > tableData.length  ?
+  <span className="shadow" style={{
+    display:'flex',
+    justifyContent:'center',
+    alignItems:'center',
+    fontSize:20,
+    fontWeight:'bold',
+    cursor:'pointer',
+    borderRadius:20,
+    width:30,
+    height:30,
+    margin:3,
+    padding:2,
+  }}
+  onClick={() =>setIncrementVal((incrementVal-10))}>&#706;</span>: null }
 
- <span> Showing {incrementVal +1} - {(incrementVal +10) > tableData.length ? tableData.length : (incrementVal +10)} of {tableData.length}</span>
+ <span style={{margin:10}}> Showing {incrementVal +1} - {(incrementVal +10) > tableData.length ? tableData.length : (incrementVal +10)} of {tableData.length}</span>
 
-{ (incrementVal +10) < tableData.length ? <span style={{display:'flex', justifyContent:'center', alignItems:'center',fontSize:30,cursor:'pointer',border:'1px solid black',width:30,height:30,margin:3}} onClick={() =>setIncrementVal((incrementVal+10))}>&#707;</span>:  null}
+{ (incrementVal +10) < tableData.length ?
+  <span
+  className="shadow" style={{
+    display:'flex',
+    justifyContent:'center',
+    alignItems:'center',
+    fontSize:20,
+    fontWeight:'bold',
+    cursor:'pointer',
+    borderRadius:20,
+    width:30,
+    height:30,
+    margin:3,
+    padding:2,
+  }}
+   onClick={() =>setIncrementVal((incrementVal+10))}>&#707;</span>:  null}
 
 </div>
+:null
+}
   </div>
 
   );

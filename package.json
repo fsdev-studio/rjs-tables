@@ -1,19 +1,23 @@
 {
   "name": "rjs-tables",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "private": false,
-  "babel": {
-"presets": [
-  "@babel/preset-react"
-]
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/fsdev-studio/rjs-tables"
 },
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  },
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3"
   },
   "scripts": {
-    "publish:npm": "mkdir rjs-table &&  babel src/components -d rjs-table --copy-files",
+    "publish:npm": "babel src/components -d ./ --copy-files",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -40,5 +44,14 @@
   "devDependencies": {
     "@babel/cli": "^7.13.16",
     "@babel/preset-react": "^7.13.13"
+  },
+  "keywords": [
+  "html table",
+  "reactjs",
+  "tables",
+  "pagination",
+  "frontend"
+  ],
+  "author": "@fsdevCOZA",
+  "license": "MIT"
   }
-}

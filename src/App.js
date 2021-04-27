@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import Table from './components/Table';
 
@@ -154,12 +154,17 @@ const header = ['Name','Surname',	'Email','Attorney Gender','Attorney Race','Att
 
 function App() {
   return (
-    <div style={{width:500}}>
+
     <Table
+    tableContainerStyle={{display:'flex',flexDirection:'column',width:'100%',justifyContent:'center',alignItems:'center',margin:10,color:'magenta'}}
+    tableStyle={{width:300,margin:10,border:'2px solid orange'}}
+    tableHeaderStyle={{color:'red',border:'3px solid magenta',background:'lightpink'}}
+    tableBodyStyle={{color:'green',border:'3px solid blue',background:'lightblue'}}
      tableHeader={header}
      tableData={data}
+     pagination={true}
      />
-     </div>
+
   );
 }
 
