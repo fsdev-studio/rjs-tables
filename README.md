@@ -37,6 +37,6 @@ tableStyle |  style object for table | ```{width:300,margin:10,border:'2px solid
 tableHeaderStyle | style object for table header | ```{color:'red',border:'3px solid magenta',background:'lightpink'}```
 tableBodyStyle |  style object for table body | ```{color:'green',border:'3px solid blue',background:'lightblue'}```
 
-https://frontend.fsdev.studio- Examples
 
-[Demo](https://frontend.fsdev.studio)
+
+[Examples](https://fsdev.studio)
